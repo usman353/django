@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+ <title>{%block head_title%} Add Restaurants | {{block.super}}{%endblock head_title%}</title>
+{%block content%}
+<!-- object has come from context in detailview when print context it give name object for that kwarg etc /1 /2 etc -->
+<h2>Add Restaurant</h2>
+{%if form.errors.non_field_errors%}
+    {{form.errors.non_field.errors}}
+{%endif%}
+<form  method="POST"> {% csrf_token %}
+    {{form.as_p}}
+
+    <button type="submit">Save</button>
+</form>
+
+{%endblock content%}
+    <!-- <input type="text" name="name" placeholder="Your Title"><br>
+    <input type="text" name="location" placeholder="Location"><br>
+    <input type="text" name="categories" placeholder="Categories"><br> -->

@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+ <title>{%block head_title%}Restaurants | {{block.super}}{%endblock head_title%}</title>
+{%block content%}
+<!-- object has come from context in detailview when print context it give name object for that kwarg etc /1 /2 etc -->
+<h2>{{object.title}} <small>{{object.categories | title}}</small></h2>
+<h3>{{object.location}}</h3>
+<p>{{object.timestamp}} , Updated {{object.updated|timesince}} ago</p>
+
+{%endblock content%}
