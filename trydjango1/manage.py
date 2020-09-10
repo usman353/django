@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+#primary module
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "trydjango1.settings")
